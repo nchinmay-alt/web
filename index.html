@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Website</title>
+    <link rel="stylesheet" href="css/css.css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+</head>
+<body>
+    
+    <header>
+        <nav>
+         
+            <div class="logo">
+                <h1>Logo</h1>
+            </div>
+            <div class="mainnav" id="mainnav">
+                <a href="#">Home</a>
+                <a href="#">Pricing</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <a href="#" id="iconbar" onclick="responsive_menu()">
+                <img src="images/menu.svg" alt="menu icon" class="menuIcon">
+            </a>
+            
+        </nav>
+        
+        <main>
+            <section class="landingpage">
+                <h1 class="bestservice">BEST ONLINE SERVICE IN THE WORLD</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laborum nihil odit modi, molestias, omnis dolorem nemo officia aperiam ab vel natus architecto ducimus est animi nesciunt incidunt. Facilis, officiis!</p>
+                <div class="btn">
+                    <a href="#" class="btns btnone">Learn More</a>
+                    <a href="#" class="btns btntwo">About Us</a>
+                </div>
+            </section>
+        </main>
+    </header>
+<script>
+    function responsive_menu(){
+        var e = document.getElementById('mainnav');
+        if(e.className === 'mainnav'){
+            e.className += " responsive";
+
+        } else{
+            e.className = 'mainnav';
+        }
+    }
+</script>
+</body>
+</html>

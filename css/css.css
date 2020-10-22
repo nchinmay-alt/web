@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+/* @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
+
+*{
+    margin: 0cm;
+    padding: 0cm;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size:25px;
+}
+/* header starts here */
+/* Set the width and height of header and add the background */
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(222, 239, 248, 0.658),rgba(222, 239, 248, 0.342)), url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/* navigation bar starts here */
+
+nav{
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(rgba(255, 183, 3,1),rgba(255, 183, 3,0));
+    color:rgb(222, 239, 248);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-transform:uppercase ;
+    
+    
+}
+/* Logog styling */
+nav .logo{
+    padding-bottom: 10px;
+    padding-top:5px;
+    width: 20%;
+    font-size: 2rem;
+}
+
+a{
+    text-decoration: none;    
+}
+
+/* Main Navigation styling */
+nav .mainnav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:47%;
+    font-size: 1.8rem;
+    
+    /* text-align: center; */
+}
+
+/* Navigation  */
+
+nav .mainnav a{
+    color:rgb(2, 48, 71);
+    width: 25%;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding-bottom: 10px;
+    padding-top:5px;
+}
+/* Navigation Hover Styling */
+nav .mainnav a:hover{
+    color:rgb(37, 89, 78);
+}
+
+/* Menu for Mobile devices Styling */
+
+#iconbar{
+    visibility: hidden;
+    opacity: 0;
+    font-size: 2rem;
+    position: absolute;
+    top: 8px;
+    right:20px;
+}
+
+#iconbar:hover{
+    color: rgb(37, 89, 78);
+}
+
+/* navigationbar ends here */
+
+
+/* content starts here */
+
+/* Content Flexbox settings */
+main{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background: red; */
+
+}
+
+.landingpage{
+    width: 50%;
+}
+
+/* Content Styling */
+.bestservice{
+    font-size: 3rem;
+    letter-spacing: 5px;
+    /* text-align: center; */
+    padding-bottom: 5vh;
+    text-shadow: 0px 1px 3px rgb(2, 48, 71);
+}
+.landingpage p{
+    font-size: 2rem;
+}
+/* Content Button Styling */
+
+.btn{
+    padding-top: 1rem;
+    display: inline-flex;
+    flex-direction: row;
+    /* background-color: rgb(2, 48, 71); */
+    align-self: center;
+    justify-content: space-between;
+    width: fit-content;
+    gap: 1rem;
+
+}
+
+.btns{
+    padding: 1rem;
+    outline: none;
+    letter-spacing: 0.1rem;
+    border-radius: 50px;
+    font-weight: 400px;
+    font-size: 1.5rem;
+    
+}
+
+.btn a{
+    transition: ease 0.3s;
+}
+
+.btnone {
+    background: rgb(2, 48, 71);
+    color: rgb(255, 183, 3);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(2, 48, 71);
+    width: 15rem;
+}
+
+
+.btnone:hover{
+    color: rgb(2, 48, 71);
+    background: rgba(255, 183, 3,0);
+    
+}
+
+.btntwo:hover{
+    background: rgba(2, 48, 71,0);
+    color: rgb(2, 48, 71);
+    border: 1px solid rgb(2, 48, 71);
+}
+
+.btntwo{
+    color: rgb(2, 48, 71);
+    background: rgb(255, 183, 3);
+    border: 1px solid rgb(255, 183, 3);
+    width: 15rem;
+}
+
+/* Button Styling Ends Here */
+/* content ends here */
+
+
+@media(max-width:900px){
+      
+    nav .logo{
+        width: 100%;
+        text-align: center;
+    }
+    nav .mainnav{
+        width: 100%;
+        background: rgb(37, 89, 78);
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        background: yellow;
+    }
+
+    .menuIcon{
+        width: 25px;
+        height: 25px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+    #iconbar{
+        opacity: 1;
+        visibility: visible;
+    }
+    .mainnav.responsive{
+        
+        background: rgba(255, 183, 3,1);
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        
+    }
+    nav .mainnav{
+        width: 100%!important;
+        height: calc(100vh-100px);
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1;
+        
+    }
+
+    nav{
+        background: linear-gradient(rgba(255, 183, 3,1),rgba(255, 183, 3,1));
+    }
+    .mainnav a{
+        text-shadow: 0px 1px 3px rgb(152, 182, 177);
+    }
+    .btn{
+        flex-direction: column;
+        /* background-color: rgba(222, 239, 248, 0.658); */
+        justify-content: space-between;
+        align-content: center;
+    }
+    /* nav{
+        height: 100vh;
+    } */
+    /* nav{
+        flex-direction: column;
+    } */
+    /* nav .mainnav.responsive a{
+        opacity: 1!important;
+        visibility: visible!important;
+    } */
+}
+@media(max-width:2570px){
+    html{
+        font-size: 22px;
+    }
+}
+@media(max-width:2000px){
+    html{
+        font-size: 13px;
+    }
+}
+@media(max-width:1400px){
+    html{
+        font-size: 10px;
+    }
+}
+
+@media(max-width:800px){
+    html{
+        font-size: 8px;
+    }
+}
+
+@media(max-width:520px){
+    html{
+        font-size: 7px;
+    }
+}
+@media(max-width:400px){
+    html{
+        font-size: 6.7px;
+    }
+}
+@media(max-width:320px){
+    html{
+        font-size: 6px;
+    }
+}
+@media(max-width:230px){
+    html{
+        font-size: 5.5px;
+    }
+}
